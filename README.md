@@ -65,3 +65,26 @@ setup({ el, app, props, plugin }) {
 //add mix.ts and app.ts
 mix.ts('resources/js/app.ts', 'public/js')
 ```
+
+06 - Create `webpack.config.js`  
+```js
+const path = require("path");
+
+module.exports = {
+    output: {
+      chunkFilename: 'js/[name].js?id=[chunkhash]',
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve('./resources/js'),
+        '~': path.resolve('./'),
+      },
+    },
+}
+
+// And import in webpack.mix.js
+const config = require('./webpack.config');
+//add to webpackConfig in mix.ts()
+.webpackConfig(config);
+
+```

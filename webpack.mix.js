@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const config = require('./webpack.config');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,8 +15,4 @@ const mix = require('laravel-mix');
 mix.ts('resources/js/app.ts', 'public/js')
     .vue()
     .postCss('resources/css/app.css', 'public/css', [])
-    .webpackConfig({
-        output: {
-          chunkFilename: 'js/[name].js?id=[chunkhash]',
-        }
-    });
+    .webpackConfig(config);
