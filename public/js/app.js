@@ -19007,9 +19007,9 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
+/***/ "./resources/js/app.ts":
 /*!*****************************!*\
-  !*** ./resources/js/app.js ***!
+  !*** ./resources/js/app.ts ***!
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -19027,12 +19027,12 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
   },
   setup: function setup(_ref) {
     var el = _ref.el,
-        App = _ref.App,
+        app = _ref.app,
         props = _ref.props,
         plugin = _ref.plugin;
     (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
       render: function render() {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(App, props);
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(app, props);
       }
     }).use(plugin).mount(el);
   }
@@ -42728,7 +42728,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + "ec062bfcded4143ac773" + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + "3314a734816405b19e24" + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -42923,7 +42923,7 @@ module.exports = webpackAsyncContext;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.ts")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

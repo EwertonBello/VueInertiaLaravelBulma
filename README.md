@@ -23,9 +23,45 @@ mix.js('resources/js/app.js', 'public/js')
 
 ## Steps - Bulma  
 
-01 - `npm install bulma`  
+01 - `npm install bulma --save-dev`  
 
 02 - Include directives in `./resources/css/app.css`  
 ```css
 @import 'bulma/css/bulma.css'
+```
+
+## Steps - Typescript
+
+01 - `npm install ts-loader typescript --save-dev`  
+
+02 - `npx tsc --init` and add recommended configuration in `tsconfig.json`  
+reference: https://v3.vuejs.org/guide/typescript-support.html#recommended-configuration  
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node"
+  }
+}
+```
+
+03 - Replace file `/resources/js/app.js` to `/resources/js/app.ts`  
+
+04 - Replace `App` to `app`  
+```ts
+setup({ el, app, props, plugin }) {
+  createApp({ render: () => h(app, props) })
+```
+
+05 - Replace `.js` to `.ts`  
+```ts
+// ./webpack.mix.js
+
+//add mix.ts and app.ts
+mix.ts('resources/js/app.ts', 'public/js')
 ```
