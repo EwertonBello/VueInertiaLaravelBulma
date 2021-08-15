@@ -23,31 +23,9 @@ mix.js('resources/js/app.js', 'public/js')
 
 ## Steps - Bulma  
 
-01 - `npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`  
+01 - `npm install bulma`  
 
-02 - `npx tailwindcss init`  
-
-03 - Configure tailwind with `purge` in `tailwind.config.js`, add paths:  
-```js
-   purge: [
-     './resources/**/*.blade.php',
-     './resources/**/*.js',
-     './resources/**/*.svelte',
-   ]
-```
-
-04 - Configure Laravel Mix in `webpack.mix.js`  
-```js
-// add tailwindcss in postCss
-mix.js("resources/js/app.js", "public/js")
-    .postCss("resources/css/app.css", "public/css", [
-        require("tailwindcss"),
-    ]);
-```
-
-05 - Include directives in `./resources/css/app.css`  
+02 - Include directives in `./resources/css/app.css`  
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'bulma/css/bulma.css'
 ```
