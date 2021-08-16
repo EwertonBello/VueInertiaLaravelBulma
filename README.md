@@ -15,7 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .vue();
 ```  
 
-05 - `npm install vue vue-loader @vue/compiler-sfc --save-dev`  
+05 - `npm install vue vue-loader @vue/compiler-sfc vue-template-compiler --save-dev`  
 
 06 - Create dir `Pages` in `./resources/js/`
 
