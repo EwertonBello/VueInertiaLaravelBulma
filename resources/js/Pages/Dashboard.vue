@@ -1,7 +1,7 @@
 <template>
-	<h1>Um vue aqui={{valor}}</h1>
+	<h1>Dashboard {{valor}}</h1>
 	<button class="button is-link" v-on:click="increment">Incrementar</button>
-	<Link href="/dashboard" class="button is-warning">Ir ao Dashboard</Link>
+    <Link href="/" class="button is-warning">Voltar</Link>
 </template>
 
 <script lang="ts">
@@ -23,8 +23,8 @@
 				this.valor++
 			}
 		},
-		components: {
-			Link,
-		}
+        components: {
+            Link,
+        }
 	})
 </script>

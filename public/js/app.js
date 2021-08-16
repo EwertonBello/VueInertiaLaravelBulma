@@ -42594,6 +42594,14 @@ function compileToFunction(template, options) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Dashboard": [
+		"./resources/js/Pages/Dashboard.vue",
+		"resources_js_Pages_Dashboard_vue"
+	],
+	"./Dashboard.vue": [
+		"./resources/js/Pages/Dashboard.vue",
+		"resources_js_Pages_Dashboard_vue"
+	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
 		"resources_js_Pages_Welcome_vue"
@@ -42728,7 +42736,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + "3314a734816405b19e24" + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Dashboard_vue":"6e56cd0a4b196b13f7cc","resources_js_Pages_Welcome_vue":"be45e71e6d4afa616262"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
