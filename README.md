@@ -82,7 +82,11 @@ module.exports = {
     },
 }
 
-// And import in webpack.mix.js
+```
+
+07 - Include `webpack.config.js` in `webpack.mix.js`  
+```js
+// import webpack.config.js
 const config = require('./webpack.config');
 //add to webpackConfig in mix.ts()
 .webpackConfig(config);
